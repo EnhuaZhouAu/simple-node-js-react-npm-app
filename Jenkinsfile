@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-               image 'node:14-alpine'
-               alwaysPull true
-        }
-    }
+    agent any
     stages {
         stage('Build') { 
             steps {
