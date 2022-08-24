@@ -7,7 +7,7 @@ pipeline {
                 sh 'ls'
             }
         }
-        tage('test') {
+        stage('test') {
             steps {
                 sh 'npm i'
             }
