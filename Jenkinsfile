@@ -1,16 +1,14 @@
 pipeline {
-    agent any
-    
-
-    stages {
-        stage('Build') {
-            steps {
-                sh 'ls'
-            }
+    agent {
+        docker {
+            image 'node:lts-bullseye-slim' 
+            args '-p 3000:3000' 
         }
-        stage('test') {
+    }
+    stages {
+        stage('Build') { 
             steps {
-                sh 'npm i'
+                sh 'npm install' 
             }
         }
     }
