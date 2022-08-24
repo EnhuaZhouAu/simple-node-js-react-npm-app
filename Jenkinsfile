@@ -7,5 +7,10 @@ pipeline {
                 sh 'ls'
             }
         }
+        tage('test') {
+            steps {
+                sh 'npm i'
+            }
+        }
     }
 }
